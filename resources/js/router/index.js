@@ -12,6 +12,11 @@ const routes = [
         component: () => import(/* webpackChunkName: "ProductCategories" */ '../services/weather-app/index.vue'),
     },
     {
+        path: "/users",
+        name: "UserCRUD",
+        component: () => import(/* webpackChunkName: "ProductCategories" */ '../services/user-crud/index.vue'),
+    },
+    {
         path: "/404",
         name: "PageNotExist",
         component: () => import(/* webpackChunkName: "ErrorPage" */ '../views/Error.vue'),

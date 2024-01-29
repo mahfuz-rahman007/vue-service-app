@@ -11,16 +11,25 @@
       <table class="table mt-4" v-if="users.length">
         <thead>
           <tr>
-            <th>Date</th>
-            <th>Time</th>
-            <th>Temperature</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
           <tr v-for="(user, index) in users" :key="index">
-            <td>{{ user.date }}</td>
-            <td>{{ user.time }}</td>
-            <td>{{ user.temperature }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.email }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.gender }}</td>
+            <td>
+                <div class="d-flex">
+                    <button class="btn btn-primary">Edit</button>
+                    <button class="btn btn-danger ms-3">Delete</button>
+                </div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -33,5 +42,28 @@
 import { ref } from "vue";
 import axios from "axios";
 
-let users = ref({});
+let users = ref([
+  {
+    id: 1,
+    name: "Rakib",
+    email: "rakib@gmail.com",
+    age: 20,
+    gender: "Male",
+  },
+  {
+    id: 2,
+    name: "Hasan",
+    email: "hasan@gmail.com",
+    age: 25,
+    gender: "Male",
+  },
+  {
+    id: 1,
+    name: "Lima",
+    email: "lima@gmail.com",
+    age: 24,
+    gender: "Female",
+  },
+]);
+
 </script>

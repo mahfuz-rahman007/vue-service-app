@@ -4,11 +4,14 @@
       <div class="d-flex justify-content-between">
         <h5 class="mb-3">User List</h5>
         <div class="d-flex justify-content-end">
-          <router-link to="/" class="btn btn-success">Create</router-link>
+          <router-link to="/create-user" class="btn btn-success">Create</router-link>
           <router-link to="/" class="btn btn-dark ms-4">Home</router-link>
         </div>
       </div>
+      <hr>
+      <!-- Table -->
       <table class="table mt-4" v-if="users.length">
+        <!-- Table Head -->
         <thead>
           <tr>
             <th>Name</th>
@@ -18,6 +21,7 @@
             <th>Action</th>
           </tr>
         </thead>
+        <!-- Table Body -->
         <tbody>
           <tr v-for="(user, index) in users" :key="index">
             <td>{{ user.name }}</td>

@@ -4,22 +4,27 @@ const routes = [
     {
         path: "/",
         name: "home",
-        component: () => import(/* webpackChunkName: "Home" */ '../views/home.vue'),
+        component: () => import('../views/home.vue'),
     },
     {
         path: "/weather-report",
         name: "weatherReport",
-        component: () => import(/* webpackChunkName: "ProductCategories" */ '../services/weather-app/index.vue'),
+        component: () => import('../services/weather-app/index.vue'),
     },
     {
         path: "/users",
         name: "UserCRUD",
-        component: () => import(/* webpackChunkName: "ProductCategories" */ '../services/user-crud/index.vue'),
+        component: () => import('../services/user-crud/index.vue'),
+    },
+    {
+        path: "/create-user",
+        name: "CreateUser",
+        component: () => import('../services/user-crud/create.vue'),
     },
     {
         path: "/404",
         name: "PageNotExist",
-        component: () => import(/* webpackChunkName: "ErrorPage" */ '../views/Error.vue'),
+        component: () => import('../views/Error.vue'),
     },
     {
         path: "/:catchAll(.*)", // Unrecognized path automatically matches 404
